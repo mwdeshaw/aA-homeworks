@@ -28,18 +28,3 @@ class Map
     end
 
 end
-
-#testing
-my_map = Map.new
-my_map.set("k1", 1)
-my_map.show
-my_map.set("k2", 2)
-my_map.set("k3", 3)
-my_map.show
-my_map.set("k2", 3)
-p my_map.get("k2")
-my_map.show
-my_map.get("k3")
-my_map.delete("k3")
-my_map.get("k4")
-my_map.show
