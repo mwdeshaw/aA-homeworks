@@ -4,7 +4,7 @@ class Stack
     end
 
     def push(el)
-    end
+    end 
 
     def pop
 
