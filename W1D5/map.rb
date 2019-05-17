@@ -41,4 +41,5 @@ p my_map.get("k2")
 my_map.show
 my_map.get("k3")
 my_map.delete("k3")
+my_map.get("k4")
 my_map.show
