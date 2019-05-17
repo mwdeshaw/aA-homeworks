@@ -5,14 +5,12 @@ class Stack
 
     def push(el)
         @stack << el
-
         self
     end 
 
     def pop
         raise "Stack is empty" if @stack.empty?
         @stack.pop
-
         self
     end
 
@@ -26,6 +24,7 @@ class Stack
     end
 
 end
+
 
 #testing
 # test_stack = Stack.new
@@ -42,4 +41,3 @@ end
 # test_stack.push(3) 
 # p test_stack #[1, 2, 3]
 # p test_stack.peek #3
-
