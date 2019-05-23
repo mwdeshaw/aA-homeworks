@@ -53,6 +53,7 @@ end
 # p clever_octopus(fish)
 
 
+
 #dancing octopus
 tiles_array = ["up", "right-up", "right", "right-down", "down", "left-down", "left",  "left-up" ]
 
@@ -64,5 +65,25 @@ def slow_dance(direction, arr)
         end
     end
 end
-p slow_dance("up", tiles_array)
-p slow_dance("right-down", tiles_array)
+# p slow_dance("up", tiles_array)
+# p slow_dance("right-down", tiles_array)
+
+
+#fast_dance
+new_tiles_data_structure = {
+    "up" => 0,
+    "right-up" => 1,
+    "right" => 2,
+    "right-down" => 3,
+    "down" => 4,
+    "left-down" => 5,
+    "left" => 6,
+    "left-up" => 7
+    }
+
+def fast_dance(direction, hash)
+    hash[direction]
+end
+# p fast_dance("up", new_tiles_data_structure)
+# p fast_dance("right-down", new_tiles_data_structure)
+
