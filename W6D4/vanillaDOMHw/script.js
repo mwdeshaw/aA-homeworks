@@ -15,17 +15,52 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
+  const favSubmit = (e) => {
+    e.preventDefault();
 
-  // adding SF places as list items
+    const newPlaceInput = document.querySelector('.favorite-input');
+    const newPlace = newPlaceInput.value;
+    newPlaceInput.value = "";
 
-  // --- your code here!
+    const newLi = document.createElement('li');
+    newLi.textContent = newPlace;
 
+    const ul = document.getElementById('sf-places');
+    ul.appendChild(newLi);
+  };
 
+  const placeSubmitButton = document.querySelector('.favorite-submit');
+  placeSubmitButton.addEventListener('click', favSubmit);
 
-  // adding new photos
+  
+  const showPhotos = (e) => {
+    const photoDiv = document.querySelector('.photo-form-container');
+    if (photoDiv.className === 'photo-form-container') {
+      photoDiv.className = 'photo-form-container hidden';
+    } else {
+      photoDiv.className = 'photo-form-container';
+    }
+  };
 
-  // --- your code here!
+  const photoShowButton = document.querySelector('.photo-show-button');
+  photoShowButton.addEventListener('click', showPhotos);
 
+  const photoSubmit = (e) => {
+    e.preventDefault();
+    const photoUrlInput = document.querySelector(".photo-url-input");
+    const photoUrl = photoUrlInput.value;
+    photoUrlInput.value = "";
 
+    const newImg = document.createElement("img");
+    newImg.src = photoUrl;
 
+    const newPicLi = document.createElement("li");
+    newPicLi.appendChild(newImg);
+
+    const dogList = document.querySelector(".dog-photos");
+    dogList.appendChild(newPicLi);
+  };
+
+const photoSubmitButton = document.querySelector(".photo-url-submit");
+  photoSubmitButton.addEventListener("click", photoSubmit);
 });
