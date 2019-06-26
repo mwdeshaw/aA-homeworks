@@ -3,7 +3,7 @@ import GiphysSearch from './giphys_search';
 import { fetchSearchGiphys } from '../actions/giphy_actions';
 
 const mapStateToProps = (state) => ({
-    giphys: state.Giphys 
+    giphys: state.giphys 
 });
 
 const mapDispatchToProps = (dispatch) => {

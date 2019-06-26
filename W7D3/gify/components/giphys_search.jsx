@@ -19,10 +19,7 @@ class GiphysSearch extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.fetchSearchGiphys(this.state);
-        this.setState({
-            searchTerm: '',
-        });
+        this.props.fetchSearchGiphys(this.state.searchTerm);
     };
 
     render() {
@@ -32,7 +29,7 @@ class GiphysSearch extends React.Component {
                 <form className='search-bar'>
                     <h2>Search for giphy</h2>
                     <label>Search Term:
-                        <input type="text"
+                        <input
                         value={this.state.searchTerm}
                         onChange={this.handleChange}
                         />

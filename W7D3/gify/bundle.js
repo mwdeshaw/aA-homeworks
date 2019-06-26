@@ -239,10 +239,7 @@ function (_React$Component) {
     key: "handleSubmit",
     value: function handleSubmit(e) {
       e.preventDefault();
-      this.props.fetchSearchGiphys(this.state);
-      this.setState({
-        searchTerm: ''
-      });
+      this.props.fetchSearchGiphys(this.state.searchTerm);
     }
   }, {
     key: "render",
@@ -251,7 +248,6 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         className: "search-bar"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Search for giphy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Search Term:", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
         value: this.state.searchTerm,
         onChange: this.handleChange
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -288,7 +284,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    giphys: state.Giphys
+    giphys: state.giphys
   };
 };
 
