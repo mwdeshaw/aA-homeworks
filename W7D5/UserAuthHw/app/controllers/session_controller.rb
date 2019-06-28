@@ -9,7 +9,7 @@ class SessionController < ApplicationController
             params[:user][:password])
         if @user
             log_in!(@user)
-            redirect_to :homepage
+            redirect_to root_url
         else
             flash.now[:errors] = ["Invalid username or password"]
             redirect_to new_session_url
